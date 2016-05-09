@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  background: #9aafa3;
+  color: #ffffff;
+}
+
+.banners-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 41px;
+}
+
+.description-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+
+  color: #323232;
+}
