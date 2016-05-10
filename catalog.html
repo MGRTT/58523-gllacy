@@ -29,7 +29,7 @@
 
         <header class="page-header">
 
-          <nav class="main-nav">
+          <nav class="main-nav clearfix">
 
             <div class="logo">
               <a href="index.html">
@@ -126,9 +126,9 @@
           <section class="catalog-menu">
 
             <ul class="breadcrumbs">
-              <li><a href="index.html">Главная</a> » </li>
-              <li><a href="#">Каталог</a> » </li>
-              <li><a>Сливочное</a></li>
+              <li class="breadcrumbs-item"><a href="index.html">Главная</a> » </li>
+              <li class="breadcrumbs-item"><a href="#">Каталог</a> » </li>
+              <li class="breadcrumbs-item"><a>Сливочное</a></li>
             </ul>
 
             <h1>Сливочное мороженое</h1>
@@ -137,83 +137,91 @@
 
           <section class="filters">
 
-            <div class="filter-sort">
-              <p>Сортировка:</p>
+            <div class="filters-top clearfix">
 
-              <select>
-                <option>по популярности</option>
-                <option>сначала недорогие</option>
-                <option>сначала дорогие</option>
-                <option>по жирности</option>
-               </select>
-             </div>
+              <div class="filter-sort">
+                <p>Сортировка:</p>
 
-             <div class="filter-price">
-              <p>Цена: 100 руб. – 500 руб.</p>
+                <select>
+                  <option>по популярности</option>
+                  <option>сначала недорогие</option>
+                  <option>сначала дорогие</option>
+                  <option>по жирности</option>
+                 </select>
+               </div>
 
-              <div class="range-controls">
-                <div class="control min-control"></div>
-                <div class="control max-control"></div>
+               <div class="filter-price">
+                <p>Цена: 100 руб. – 500 руб.</p>
+
+                <div class="range-controls">
+                  <div class="control min-control"></div>
+                  <div class="control max-control"></div>
+                </div>
               </div>
+
+              <div class="filter-oiliness">
+                <p>Жирность:</p>
+
+                <ul class="filter-oiliness-items">
+                  <li>
+                    <input type="radio" id="radio-1" name="oiliness" value="0">
+                    <label for="radio-1">0%</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="radio-2" name="oiliness" value="10" checked>
+                    <label for="radio-2">до 10%</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="radio-3" name="oiliness" value="30">
+                    <label for="radio-3">до 30%</label>
+                  </li>
+                  <li>
+                    <input type="radio" id="radio-4" name="oiliness" value=">30">
+                    <label for="radio-4">выше 30%</label>
+                  </li>
+                </ul>
+              </div>
+
             </div>
 
-            <div class="filter-oiliness">
-              <p>Жирность:</p>
+            <div class="filters-bottom clearfix">
 
-              <ul>
-                <li>
-                  <input type="radio" id="radio-1" name="oiliness" value="0">
-                  <label for="radio-1">0%</label>
-                </li>
-                <li>
-                  <input type="radio" id="radio-2" name="oiliness" value="10" checked>
-                  <label for="radio-2">до 10%</label>
-                </li>
-                <li>
-                  <input type="radio" id="radio-3" name="oiliness" value="30">
-                  <label for="radio-3">до 30%</label>
-                </li>
-                <li>
-                  <input type="radio" id="radio-4" name="oiliness" value=">30">
-                  <label for="radio-4">выше 30%</label>
-                </li>
-              </ul>
+              <div class="filter-stuffing">
+                <p>Наполнители:</p>
+
+                <ul class="filter-stuffing-items">
+                  <li>
+                    <input type="checkbox" id="check-1" name="chocolate" checked>
+                    <label for="check-1">шоколадные</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check-2" name="sugar" checked>
+                    <label for="check-2">сахарные присыпки</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check-3" name="fruit">
+                    <label for="check-3">фрукты</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check-4" name="syrup">
+                    <label for="check-4">сиропы</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check-5" name="jam">
+                    <label for="check-5">джемы</label>
+                  </li>
+                </ul>
+              </div>
+
+              <input class="filters-btn" type="submit" value="Применить">
+
             </div>
-
-            <div class="filter-stuffing">
-              <p>Наполнители:</p>
-
-              <ul>
-                <li>
-                  <input type="checkbox" id="check-1" name="chocolate" checked>
-                  <label for="check-1">шоколадные</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="check-2" name="sugar" checked>
-                  <label for="check-2">сахарные присыпки</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="check-3" name="fruit">
-                  <label for="check-3">фрукты</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="check-4" name="syrup">
-                  <label for="check-4">сиропы</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="check-5" name="jam">
-                  <label for="check-5">джемы</label>
-                </li>
-              </ul>
-             </div>
-
-             <input type="submit" value="Применить">
 
           </section>
 
           <section class="catalog-items">
 
-            <div class="catalog-items-row">
+            <div class="catalog-items-row clearfix">
 
               <div class="catalog-item">
                 <div class="catalog-item-picture">
@@ -335,14 +343,14 @@
 
           </section>
 
-          <section class="catalog-footer">
+          <section class="catalog-footer clearfix">
 
             <ul class="pagination">
-              <li><a>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
+              <li class="pagination-item"><a>1</a></li>
+              <li class="pagination-item"><a href="#">2</a></li>
+              <li class="pagination-item"><a href="#">3</a></li>
+              <li class="pagination-item"><a href="#">4</a></li>
+              <li class="pagination-item"><a href="#">5</a></li>
             </ul>
 
           </section>
