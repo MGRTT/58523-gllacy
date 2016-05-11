@@ -11,6 +11,8 @@ body {
   color: #ffffff;
 }
 
+/* ==== Центровщик и распорка ==== */
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -22,6 +24,8 @@ body {
   display: table;
   clear: both;
 }
+
+/* ==== ГЛАВНАЯ ==== */
 
 .page-header {
   position: relative;
@@ -56,7 +60,15 @@ body {
   vertical-align: top;
 }
 
-.main-nav-item a {
+.main-nav-item ul {
+  display: none;
+}
+
+.main-nav-item:hover ul {
+  display: block;
+}
+
+.main-nav-link {
   display: block;
 
   padding-top: 30px;
@@ -72,8 +84,10 @@ body {
   list-style: none;
 }
 
-.sub-menu a {
-  padding: 10px 0;
+.sub-menu-link {
+  display: block;
+
+  padding-top: 10px;
 }
 
 .user-menu {
@@ -94,7 +108,15 @@ body {
   vertical-align: top;
 }
 
-.user-menu-item a {
+.user-menu-item ul {
+  display: none;
+}
+
+.user-menu-item:hover ul {
+  display: block;
+}
+
+.user-menu-link {
   display: block;
 
   padding-top: 30px;
@@ -131,24 +153,19 @@ body {
   height: 43px;
 }
 
-.user-menu-enter a {
-  padding: 0;
-}
-
 .user-menu-btn {
   width: 100px;
   float: left;
 }
 
-.user-menu-links {
+.enter-links {
   width: 121px;
   float: right;
 }
 
-.user-menu-links a {
+.enter-link {
   font-size: 13px;
 }
-
 
 .info {
   position: absolute;
@@ -314,7 +331,7 @@ body {
   list-style: none;
 }
 
-.social-links li {
+.social-link {
   display: inline-block;
   vertical-align: top;
 }
@@ -353,7 +370,7 @@ body {
   list-style: none;
 }
 
-.user-menu-basket li {
+.basket-item {
   position: absolute;
   right: 0;
 
@@ -372,7 +389,7 @@ body {
   vertical-align: top;
 }
 
-.breadcrumbs-item a {
+.breadcrumbs-link {
 
 }
 
@@ -404,7 +421,7 @@ body {
   list-style: none;
 }
 
-.filter-oiliness-items li {
+.filter-oiliness-item {
   display: inline-block;
   vertical-align: top;
 }
@@ -421,7 +438,7 @@ body {
   list-style: none;
 }
 
-.filter-stuffing-items li{
+.filter-stuffing-item {
   display: inline-block;
   vertical-align: top;
 }
@@ -450,6 +467,14 @@ body {
   margin-right: 0;
 }
 
+.catalog-item .quick-view {
+  display: none;
+}
+
+.catalog-item:hover .quick-view {
+  display: block;
+}
+
 .pagination {
   width: 190px;
   float: right;
@@ -464,6 +489,6 @@ body {
   vertical-align: top;
 }
 
-.pagination-item a {
+.pagination-link {
 
 }

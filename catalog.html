@@ -10,22 +10,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
 
-    <style>
-      li ul {display: none;}
-      li:hover ul {display: block;}
-
-      .catalog-item .quick-view {display: none;}
-      .catalog-item:hover .quick-view {display: block;}
-    </style>
-
   </head>
 
 
   <body>
 
     <div class="container">
-
-      <form action="#" method="post">
 
         <header class="page-header">
 
@@ -38,53 +28,60 @@
             </div>
 
             <ul class="main-nav-items">
-              <li class="main-nav-item"><a href="#">Каталог</a>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">Каталог</a>
 
                 <ul class="sub-menu">
-                  <li class="sub-menu-item"><a href="#">Новинки</a></li>
-                  <li class="sub-menu-item"><a>Сливочное</a></li>
-                  <li class="sub-menu-item"><a href="#">Щербеты</a></li>
-                  <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
-                  <li class="sub-menu-item"><a href="#">Мелорин</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="#">Новинки</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" >Сливочное</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="#">Щербеты</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
+                  <li class="sub-menu-item"><a class="sub-menu-link" href="#">Мелорин</a></li>
                 </ul>
 
               </li>
 
-              <li class="main-nav-item"><a href="#">Доставка и оплата</a></li>
-              <li class="main-nav-item"><a href="#">О Компании</a></li>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">Доставка и оплата</a></li>
+              <li class="main-nav-item"><a class="main-nav-link" href="#">О Компании</a></li>
             </ul>
 
             <ul class="user-menu">
-              <li class="user-menu-item"><a href="#">Лупа</a>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Лупа</a>
 
                 <ul class="user-menu-search">
-                  <li>
-                    <input type="search" name="search" placeholder="Что ищем?">
+                  <li class="search-item">
+                    <form name="search-form" action="#" method="post">
+                      <input type="search" name="search" placeholder="Что ищем?">
+                    </form>
                   </li>
                 </ul>
 
               </li>
 
-              <li class="user-menu-item"><a href="#">Вход</a>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">Вход</a>
 
                 <ul class="user-menu-enter">
-                  <li>
-                    <input type="email" name="login" placeholder="Электронная почта" required>
-                    <input type="password" name="password" placeholder="Пароль" required>
-                    <a class="btn" href="#">Войти</a>
+                  <li class="enter-item">
+                    <form name="enter-form" action="#" method="post">
+                      <input type="email" name="login" placeholder="Электронная почта" required>
+                      <input type="password" name="password" placeholder="Пароль" required>
 
-                    <div class="user-menu-links">
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Новая регистрация</a>
-                    </div>
+                      <div class="enter-wrapper clearfix">
+                        <a class="user-menu-btn btn" href="#">Войти</a>
+
+                        <div class="enter-links">
+                          <a class="enter-link" href="#">Забыли пароль?</a>
+                          <a class="enter-link" href="#">Новая регистрация</a>
+                        </div>
+                      </div>
+                    </form>
                   </li>
                 </ul>
               </li>
 
-              <li class="user-menu-item"><a href="#">Пусто</a>
+              <li class="user-menu-item"><a class="user-menu-link" href="#">2 товара</a>
 
                 <ul class="user-menu-basket">
-                  <li>
+                  <li class="basket-item">
                     <table>
                       <tr>
                         <td></td>
@@ -126,9 +123,9 @@
           <section class="catalog-menu">
 
             <ul class="breadcrumbs">
-              <li class="breadcrumbs-item"><a href="index.html">Главная</a> » </li>
-              <li class="breadcrumbs-item"><a href="#">Каталог</a> » </li>
-              <li class="breadcrumbs-item"><a>Сливочное</a></li>
+              <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a> » </li>
+              <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Каталог</a> » </li>
+              <li class="breadcrumbs-item"><a class="breadcrumbs-link">Сливочное</a></li>
             </ul>
 
             <h1>Сливочное мороженое</h1>
@@ -137,85 +134,89 @@
 
           <section class="filters">
 
-            <div class="filters-top clearfix">
+            <form name="filters-form" action="#" method="post">
 
-              <div class="filter-sort">
-                <p>Сортировка:</p>
+              <div class="filters-top clearfix">
 
-                <select>
-                  <option>по популярности</option>
-                  <option>сначала недорогие</option>
-                  <option>сначала дорогие</option>
-                  <option>по жирности</option>
-                 </select>
-               </div>
+                <div class="filter-sort">
+                  <p>Сортировка:</p>
 
-               <div class="filter-price">
-                <p>Цена: 100 руб. – 500 руб.</p>
+                  <select>
+                    <option>по популярности</option>
+                    <option>сначала недорогие</option>
+                    <option>сначала дорогие</option>
+                    <option>по жирности</option>
+                   </select>
+                 </div>
 
-                <div class="range-controls">
-                  <div class="control min-control"></div>
-                  <div class="control max-control"></div>
+                 <div class="filter-price">
+                  <p>Цена: 100 руб. – 500 руб.</p>
+
+                  <div class="range-controls">
+                    <div class="control min-control"></div>
+                    <div class="control max-control"></div>
+                  </div>
                 </div>
+
+                <div class="filter-oiliness">
+                  <p>Жирность:</p>
+
+                  <ul class="filter-oiliness-items">
+                    <li class="filter-oiliness-item">
+                      <input type="radio" id="radio-1" name="oiliness" value="0">
+                      <label for="radio-1">0%</label>
+                    </li>
+                    <li class="filter-oiliness-item">
+                      <input type="radio" id="radio-2" name="oiliness" value="10" checked>
+                      <label for="radio-2">до 10%</label>
+                    </li>
+                    <li class="filter-oiliness-item">
+                      <input type="radio" id="radio-3" name="oiliness" value="30">
+                      <label for="radio-3">до 30%</label>
+                    </li>
+                    <li class="filter-oiliness-item">
+                      <input type="radio" id="radio-4" name="oiliness" value=">30">
+                      <label for="radio-4">выше 30%</label>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
 
-              <div class="filter-oiliness">
-                <p>Жирность:</p>
+              <div class="filters-bottom clearfix">
 
-                <ul class="filter-oiliness-items">
-                  <li>
-                    <input type="radio" id="radio-1" name="oiliness" value="0">
-                    <label for="radio-1">0%</label>
-                  </li>
-                  <li>
-                    <input type="radio" id="radio-2" name="oiliness" value="10" checked>
-                    <label for="radio-2">до 10%</label>
-                  </li>
-                  <li>
-                    <input type="radio" id="radio-3" name="oiliness" value="30">
-                    <label for="radio-3">до 30%</label>
-                  </li>
-                  <li>
-                    <input type="radio" id="radio-4" name="oiliness" value=">30">
-                    <label for="radio-4">выше 30%</label>
-                  </li>
-                </ul>
+                <div class="filter-stuffing">
+                  <p>Наполнители:</p>
+
+                  <ul class="filter-stuffing-items">
+                    <li class="filter-stuffing-item">
+                      <input type="checkbox" id="check-1" name="chocolate" checked>
+                      <label for="check-1">шоколадные</label>
+                    </li>
+                    <li class="filter-stuffing-item">
+                      <input type="checkbox" id="check-2" name="sugar" checked>
+                      <label for="check-2">сахарные присыпки</label>
+                    </li>
+                    <li class="filter-stuffing-item">
+                      <input type="checkbox" id="check-3" name="fruit">
+                      <label for="check-3">фрукты</label>
+                    </li>
+                    <li class="filter-stuffing-item">
+                      <input type="checkbox" id="check-4" name="syrup">
+                      <label for="check-4">сиропы</label>
+                    </li>
+                    <li class="filter-stuffing-item">
+                      <input type="checkbox" id="check-5" name="jam">
+                      <label for="check-5">джемы</label>
+                    </li>
+                  </ul>
+                </div>
+
+                <a class="filters-btn" href="#">Применить</a>
+
               </div>
 
-            </div>
-
-            <div class="filters-bottom clearfix">
-
-              <div class="filter-stuffing">
-                <p>Наполнители:</p>
-
-                <ul class="filter-stuffing-items">
-                  <li>
-                    <input type="checkbox" id="check-1" name="chocolate" checked>
-                    <label for="check-1">шоколадные</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="check-2" name="sugar" checked>
-                    <label for="check-2">сахарные присыпки</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="check-3" name="fruit">
-                    <label for="check-3">фрукты</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="check-4" name="syrup">
-                    <label for="check-4">сиропы</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="check-5" name="jam">
-                    <label for="check-5">джемы</label>
-                  </li>
-                </ul>
-              </div>
-
-              <input class="filters-btn" type="submit" value="Применить">
-
-            </div>
+            </form>
 
           </section>
 
@@ -346,11 +347,11 @@
           <section class="catalog-footer clearfix">
 
             <ul class="pagination">
-              <li class="pagination-item"><a>1</a></li>
-              <li class="pagination-item"><a href="#">2</a></li>
-              <li class="pagination-item"><a href="#">3</a></li>
-              <li class="pagination-item"><a href="#">4</a></li>
-              <li class="pagination-item"><a href="#">5</a></li>
+              <li class="pagination-item"><a class="pagination-link">1</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">4</a></li>
+              <li class="pagination-item"><a class="pagination-link" href="#">5</a></li>
             </ul>
 
           </section>
@@ -363,10 +364,10 @@
           <div class="page-footer-item">
 
             <ul class="social-links">
-              <li><a class="social social-twi" href="#">Твиттер</a></li>
-              <li><a class="social social-insta" href="#">Инстаграм</a></li>
-              <li><a class="social social-fb" href="#">Фейсбук</a></li>
-              <li><a class="social social-vk" href="#">Вконтакте</a></li>
+              <li class="social-link"><a class="social social-twi" href="#">Твиттер</a></li>
+              <li class="social-link"><a class="social social-insta" href="#">Инстаграм</a></li>
+              <li class="social-link"><a class="social social-fb" href="#">Фейсбук</a></li>
+              <li class="social-link"><a class="social social-vk" href="#">Вконтакте</a></li>
             </ul>
 
           </div>
@@ -392,8 +393,6 @@
           </div>
 
         </footer>
-
-      </form>
 
     </div>
 
