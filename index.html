@@ -16,6 +16,12 @@
 
   <body>
 
+    <!-- Переключатель слайдов -->
+
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
+
     <div class="site-wrapper">
 
       <header class="page-header container">
@@ -94,8 +100,26 @@
       <main>
 
         <section class="intro container">
-          <div class="bg-controls">
-            <!-- кнопки -->
+
+          <div class="intro-slide" id="slide1">
+            <div class="intro-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <a class="intro-btn btn" href="#">Давайте оба!</a>
+          </div>
+
+          <div class="intro-slide" id="slide2">
+            <div class="intro-title">Шоколадный пломбир и лимонный сорбет</div>
+            <a class="intro-btn btn" href="#">Давайте оба!</a>
+          </div>
+
+          <div class="intro-slide" id="slide3">
+            <div class="intro-title">Пломбир с помадкой и клубничный щербет</div>
+            <a class="intro-btn btn" href="#">Давайте оба!</a>
+          </div>
+
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
           </div>
 
           <a class="intro-btn btn" href="#">Давайте оба!</a>
@@ -181,7 +205,7 @@
 
           <div class="blog">
             <p class="blog-title">Новое в нашем блоге</p>
-            <a class="post-title" href="#">10  способов сервировки фруктовых щербетов к столу</a>
+            <a class="post-title" href="#">10  способов сервировки<br> фруктовых щербетов<br> к столу</a>
           </div>
 
           <div class="subscribe">
@@ -190,7 +214,7 @@
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
 
               <input type="email" name="sub-user-email" placeholder="Электронная почта" required>
-              <input type="submit" class="email-btn btn" value="Отправить">
+              <a class="email-btn btn">Отправить</a>
             </form>
 
           </div>
@@ -212,7 +236,7 @@
                 <span class="contacts-big">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)
               </p>
 
-              <a class="btn" href="#">Форма обратной связи</a>
+              <a class="contacts-btn btn" href="#">Форма обратной связи</a>
 
             </div>
 
