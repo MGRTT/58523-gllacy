@@ -38,7 +38,7 @@ input:focus {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 1.8%;
+  padding: 0 30px;
 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -328,10 +328,6 @@ input:focus {
   color: #323232;
 }
 
-.non-empty {
-  color: #323232;
-}
-
 .user-menu-search,
 .user-menu-enter {
   position: absolute;
@@ -507,6 +503,10 @@ input:focus {
   float: right;
 
   text-align: right;
+}
+
+.info-index {
+  right: 30px;
 }
 
 .info-time {
@@ -1343,11 +1343,16 @@ input:focus {
   border: 0;
 
   color: #ffffff;
-  background: transparent;
+  background: url('../img/arrow-1.svg') no-repeat 138px 7px transparent;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
-.filter-sort-select:hover {
+.filter-wrapper:hover .filter-sort-select {
   color: #323232;
+  background: url('../img/arrow-2.svg') no-repeat 138px 7px transparent;
 }
 
 .filter-sort-select:focus {
