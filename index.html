@@ -144,37 +144,45 @@
           <div class="hit">
             <div class="hit-picture">
               <img src="img/01.png" width="267" height="267" alt="Апельсиновый джем">
-              <img  class="hit-sticker" src="img/hit.png" width="61" height="61">
+              <img  class="hit-sticker" src="img/hit.png" width="61" height="61" alt="хит">
               <div class="price">355 <span class="price-padding">/кг</span></div>
             </div>
             <a class="hit-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="quick-view-btn btn" href="#">Быстрый просмотр</a>
+            <div class="item-bg"></div>
           </div>
 
           <div class="hit">
             <div class="hit-picture">
               <img src="img/02.png" width="267" height="267" alt="Сливочно-кофейное">
-              <img  class="hit-sticker" src="img/hit.png" width="61" height="61">
+              <img  class="hit-sticker" src="img/hit.png" width="61" height="61" alt="хит">
               <div class="price">380 <span class="price-padding">/кг</span></div>
             </div>
             <a class="hit-title" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="quick-view-btn btn" href="#">Быстрый просмотр</a>
+            <div class="item-bg"></div>
           </div>
 
           <div class="hit">
             <div class="hit-picture">
               <img src="img/03.png" width="267" height="267" alt="Сливочно-клубничное">
-              <img  class="hit-sticker" src="img/hit.png" width="61" height="61">
+              <img  class="hit-sticker" src="img/hit.png" width="61" height="61" alt="хит">
               <div class="price">355 <span class="price-padding">/кг</span></div>
             </div>
             <a class="hit-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="quick-view-btn btn" href="#">Быстрый просмотр</a>
+            <div class="item-bg"></div>
           </div>
 
           <div class="hit">
             <div class="hit-picture">
               <img src="img/04.png" width="267" height="267" alt="Крем-брюле">
-              <img  class="hit-sticker" src="img/hit.png" width="61" height="61">
+              <img  class="hit-sticker" src="img/hit.png" width="61" height="61" alt="хит">
               <div class="price">415 <span class="price-padding">/кг</span></div>
             </div>
             <a class="hit-title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+            <a class="quick-view-btn btn" href="#">Быстрый просмотр</a>
+            <div class="item-bg"></div>
           </div>
 
         </section>
@@ -222,7 +230,12 @@
         </div>
 
         <section class="map clearfix">
-          <!-- Карта -->
+
+          <div class="map-wrapper">
+
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=pch_uWbeisndsm1FATgxlA8gapICSuKn&width=100%&height=430&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+
+          </div>
 
           <div class="container">
 
@@ -242,21 +255,23 @@
 
           </div>
 
+          <div class="feedback">
+
+            <button class="feedback-close" type="button" title="Закрыть">Закрыть</button>
+
+            <form name="feedback-form" action="#" method="post">
+              <p>Мы обязательно вам ответим!</p>
+
+              <input type="text" name="user-name" placeholder="Как вас зовут?" required>
+              <input type="email" name="user-email" placeholder="Ваша почта для ответа?" required>
+              <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
+
+              <a class="feedback-btn btn">Отправить</a>
+            </form>
+
+          </div>
+
         </section>
-
-        <div class="feedback">
-
-          <form name="feedback-form" action="#" method="post">
-            <p>Мы обязательно вам ответим!</p>
-
-            <input type="text" name="user-name" placeholder="Как вас зовут?" required>
-            <input type="email" name="user-email" placeholder="Ваша почта для ответа?" required>
-            <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
-
-            <a class="feedback-btn btn">Отправить</a>
-          </form>
-
-        </div>
 
       </main>
 
@@ -297,6 +312,8 @@
       </footer>
 
     </div>
+
+    <script src="js/script.min.js"></script>
 
   </body>
 
